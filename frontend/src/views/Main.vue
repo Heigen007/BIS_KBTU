@@ -7,6 +7,7 @@
                     <q-tab name="modification" label="Modify Assistant" />
                     <q-tab name="chat" label="Chat with Assistant" />
                     <q-tab name="api" label="API Usage" />
+                    <q-tab name="faq" label="FAQ/Contact" />
                 </q-tabs>
                 <keep-alive>
                     <q-tab-panels v-model="activeTab">
@@ -22,6 +23,9 @@
                         <q-tab-panel name="api">
                             <AssistantAPIUsage />
                         </q-tab-panel>
+                        <q-tab-panel name="faq">
+                            <FAQContact />
+                        </q-tab-panel>
                     </q-tab-panels>
                 </keep-alive>
             </q-page>
@@ -33,7 +37,8 @@
 import AssistantCreation from '../components/AssistantCreation.vue'
 import AssistantModification from '../components/AssistantModification.vue'
 import AssistantChat from '../components/AssistantChat.vue'
-import AssistantAPIUsage from '../components/AssistantAPIUsage.vue' // Import the new component
+import AssistantAPIUsage from '../components/AssistantAPIUsage.vue'
+import FAQContact from '../components/FAQContact.vue'
 import { ref, onBeforeMount } from 'vue'
 
 const activeTab = ref(localStorage.getItem('activeTab') || 'creation')
