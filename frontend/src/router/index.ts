@@ -1,14 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import CreateAssistant from '../views/CreateAssistant.vue';
-import ManageAssistant from '../views/ManageAssistant.vue';
-import ChatAssistant from '../views/ChatAssistant.vue';
-import NewPageInterface from '../views/NewPageInterface.vue';
-
+import Main from '../views/Main.vue';
 const routes = [
-    { path: '/a', component: CreateAssistant },
-    { path: '/', component: NewPageInterface },
-    { path: '/manage/:id/:vectorStoreId', component: ManageAssistant },
-    { path: '/chat/:threadId/:assistantId', component: ChatAssistant },
+    { path: '/', component: Main },
 ];
 
 const router = createRouter({
